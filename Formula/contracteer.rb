@@ -1,26 +1,26 @@
-# Generated with JReleaser 1.23.0 at 2026-08-04T08:35:41.220476574Z
+# Generated with JReleaser 1.23.0 at 2026-09-25T15:34:13.511818955Z
 
 class Contracteer < Formula
   desc "The loyal guard of your API contracts."
   homepage "https://contracteer.dev"
-  version "4.0.0"
-  license "GPL-3.0-only"
+  version "4.1.0"
+  license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/contracteer-dev/contracteer/releases/download/4.0.0/contracteer-4.0.0-linux-aarch_64.zip"
-    sha256 "c00fb177f1313806d8584c634acc02f90ae2299eab858154cd9118adc493751c"
+    url "https://github.com/contracteer-dev/contracteer/releases/download/4.1.0/contracteer-4.1.0-linux-aarch_64.zip"
+    sha256 "487dde00e90fdf59c1d83b3315b519a39c0676144c1861affe60b670901595d9"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/contracteer-dev/contracteer/releases/download/4.0.0/contracteer-4.0.0-linux-x86_64.zip"
-    sha256 "781be856f0f1764c8cf6fa0936bc767ba5733d90f289780f066f33d7e0c7f52e"
+    url "https://github.com/contracteer-dev/contracteer/releases/download/4.1.0/contracteer-4.1.0-linux-x86_64.zip"
+    sha256 "1ae2a3c489b9c8eb34fec3cf4c1b3da3b70c2d76910b04816dd72dd383d5dd84"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/contracteer-dev/contracteer/releases/download/4.0.0/contracteer-4.0.0-osx-aarch_64.zip"
-    sha256 "05a92b89d2ed7d586fac62006a470808c39f5fd1d0ffd2f39d2e3c84910a8cf8"
+    url "https://github.com/contracteer-dev/contracteer/releases/download/4.1.0/contracteer-4.1.0-osx-aarch_64.zip"
+    sha256 "ea724a166f9aadeda39cb57e183a22bb97272a389aa098edcfda81695c17f320"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/contracteer-dev/contracteer/releases/download/4.0.0/contracteer-4.0.0-osx-x86_64.zip"
-    sha256 "603181cc17e46c1b8b21210afba49dfd74f6bbb73a70ca0c6a355db1874ea2a0"
+    url "https://github.com/contracteer-dev/contracteer/releases/download/4.1.0/contracteer-4.1.0-osx-x86_64.zip"
+    sha256 "354c9a3479de527ca94900c1547b9008bc2df2c5a21967ffd3c1f7c3d6dc45a6"
   end
 
   livecheck do
@@ -34,6 +34,6 @@ class Contracteer < Formula
 
   test do
     output = shell_output("#{bin}/contracteer --version")
-    assert_match "4.0.0", output
+    assert_match "4.1.0", output
   end
 end
